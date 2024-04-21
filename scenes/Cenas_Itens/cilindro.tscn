@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/itens/cilindro.png" type="Texture" id=1]
+[ext_resource path="res://assets/light.jpg" type="Texture" id=2]
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 128, 256 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 256, 128, 256 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 512, 128, 256 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "anima",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 31, 32.75 )
+
+[node name="cilindro" type="StaticBody2D"]
+collision_layer = 256
+
+[node name="aniama_" type="AnimatedSprite" parent="."]
+position = Vector2( 2.5, -4 )
+scale = Vector2( 0.539063, 0.539063 )
+frames = SubResource( 5 )
+animation = "anima"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 3, 21.25 )
+shape = SubResource( 1 )
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 4, 0 )
+texture = ExtResource( 2 )
+color = Color( 0.701961, 0.917647, 0.227451, 1 )
+energy = 0.6
+shadow_enabled = true
+shadow_item_cull_mask = 0

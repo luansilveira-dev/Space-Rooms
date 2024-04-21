@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/itens/botões.png" type="Texture" id=1]
+
+[node name="Button" type="Button"]
+margin_right = 25.0
+margin_bottom = 20.0
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 14, 11 )
+texture = ExtResource( 1 )
+vframes = 5
+frame = 2

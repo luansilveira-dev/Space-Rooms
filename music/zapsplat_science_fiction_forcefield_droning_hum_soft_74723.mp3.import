@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/zapsplat_science_fiction_forcefield_droning_hum_soft_74723.mp3-38d8dd9c1f4a5b955a07c0d4abe060e5.mp3str"
+
+[deps]
+
+source_file="res://music/zapsplat_science_fiction_forcefield_droning_hum_soft_74723.mp3"
+dest_files=[ "res://.import/zapsplat_science_fiction_forcefield_droning_hum_soft_74723.mp3-38d8dd9c1f4a5b955a07c0d4abe060e5.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/zapsplat_science_fiction_deep_space_spinning_planet_ambience_drone_airy_movement_slow_whooshes_002_70169.mp3-819d41684f9db7e00f503abab5c3f0d2.mp3str"
+
+[deps]
+
+source_file="res://music_project/zapsplat_science_fiction_deep_space_spinning_planet_ambience_drone_airy_movement_slow_whooshes_002_70169.mp3"
+dest_files=[ "res://.import/zapsplat_science_fiction_deep_space_spinning_planet_ambience_drone_airy_movement_slow_whooshes_002_70169.mp3-819d41684f9db7e00f503abab5c3f0d2.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

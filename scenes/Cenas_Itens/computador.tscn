@@ -1,0 +1,90 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/itens/computador (traços roxos).png" type="Texture" id=1]
+[ext_resource path="res://script/computador_informe.gd" type="Script" id=2]
+[ext_resource path="res://assets/light.jpg" type="Texture" id=3]
+[ext_resource path="res://scenes/caixa_de_texto/computador.tscn" type="PackedScene" id=4]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite_computador:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "computador_desligador"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite_computador:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "computador_ligado"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite_computador:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 29, 16 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 29, 11 )
+
+[node name="computador" type="Area2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite_computador" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+vframes = 2
+
+[node name="Animation_computador" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 1 )
+anims/computador_desligador = SubResource( 2 )
+anims/computador_ligado = SubResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 27 )
+shape = SubResource( 4 )
+
+[node name="Light2D" type="Light2D" parent="."]
+visible = false
+texture = ExtResource( 3 )
+energy = 0.75
+
+[node name="computador" parent="." instance=ExtResource( 4 )]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="computador"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="computador/StaticBody2D"]
+position = Vector2( 0, 21 )
+shape = SubResource( 5 )
+
+[connection signal="body_entered" from="." to="." method="_on_computador_body_entered"]
+[connection signal="body_entered" from="." to="computador" method="_on_computador_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_computador_body_exited"]

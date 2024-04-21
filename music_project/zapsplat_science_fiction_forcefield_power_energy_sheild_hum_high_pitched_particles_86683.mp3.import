@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/zapsplat_science_fiction_forcefield_power_energy_sheild_hum_high_pitched_particles_86683.mp3-af5253575a7198ba299b431ac65efb77.mp3str"
+
+[deps]
+
+source_file="res://music_project/zapsplat_science_fiction_forcefield_power_energy_sheild_hum_high_pitched_particles_86683.mp3"
+dest_files=[ "res://.import/zapsplat_science_fiction_forcefield_power_energy_sheild_hum_high_pitched_particles_86683.mp3-af5253575a7198ba299b431ac65efb77.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

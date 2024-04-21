@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/zapsplat_science_fiction_forcefield_energy_harmonic_evolving_86678.mp3-bf27be48253cb542614dc6839652fdeb.mp3str"
+
+[deps]
+
+source_file="res://music_project/zapsplat_science_fiction_forcefield_energy_harmonic_evolving_86678.mp3"
+dest_files=[ "res://.import/zapsplat_science_fiction_forcefield_energy_harmonic_evolving_86678.mp3-bf27be48253cb542614dc6839652fdeb.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,122 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://font/modern_dos/ModernDOS8x16.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://script/caixa_Input.gd" type="Script" id=2]
+[ext_resource path="res://sons/zapsplat_multimedia_game_sound_retro_arcade_lose_life_fail_005_92323.mp3" type="AudioStream" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.0235294, 0.00392157, 0.054902, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.282353, 0.0941176, 0.552941, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 10
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.0235294, 0.00392157, 0.054902, 1 )
+shadow_color = Color( 0.878431, 0.831373, 0.831373, 0.6 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.0235294, 0.00392157, 0.054902, 1 )
+border_color = Color( 0.631373, 0.0666667, 0.0666667, 1 )
+
+[sub_resource type="Theme" id=4]
+/styles/ros = SubResource( 5 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 11
+font_data = ExtResource( 1 )
+
+[node name="caixa_Input" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="caixa_Conteiner" type="MarginContainer" parent="."]
+visible = false
+anchor_left = 0.074
+anchor_top = 0.556
+anchor_right = 0.815
+anchor_bottom = 0.906
+margin_left = 16.0
+margin_top = 27.0
+margin_right = 16.0
+margin_bottom = -3.08
+
+[node name="Panel" type="Panel" parent="caixa_Conteiner"]
+margin_right = 200.0
+margin_bottom = 41.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="MarginContainer" type="MarginContainer" parent="caixa_Conteiner"]
+margin_right = 200.0
+margin_bottom = 41.0
+custom_constants/margin_right = 9
+custom_constants/margin_top = 8
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 8
+
+[node name="Panel" type="Panel" parent="caixa_Conteiner/MarginContainer"]
+visible = false
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 191.0
+margin_bottom = 33.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="caixa_Conteiner/MarginContainer"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 191.0
+margin_bottom = 33.0
+
+[node name="start" type="Label" parent="caixa_Conteiner/MarginContainer/HBoxContainer"]
+margin_right = 7.0
+margin_bottom = 11.0
+rect_min_size = Vector2( 7, 0 )
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 2 )
+text = "-"
+
+[node name="Label" type="Label" parent="caixa_Conteiner/MarginContainer/HBoxContainer"]
+margin_left = 11.0
+margin_right = 170.0
+margin_bottom = 25.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+
+[node name="MarginContainer" type="MarginContainer" parent="caixa_Conteiner/MarginContainer/HBoxContainer"]
+margin_left = 174.0
+margin_right = 174.0
+margin_bottom = 25.0
+
+[node name="Panel" type="Panel" parent="caixa_Conteiner/MarginContainer/HBoxContainer/MarginContainer"]
+margin_bottom = 25.0
+custom_styles/panel = SubResource( 3 )
+
+[node name="chave" type="Label" parent="caixa_Conteiner/MarginContainer/HBoxContainer/MarginContainer"]
+margin_top = 6.0
+margin_bottom = 18.0
+theme = SubResource( 4 )
+custom_fonts/font = SubResource( 6 )
+align = 2
+valign = 3
+
+[node name="end" type="Label" parent="caixa_Conteiner/MarginContainer/HBoxContainer"]
+margin_left = 178.0
+margin_right = 183.0
+margin_bottom = 25.0
+size_flags_vertical = 9
+size_flags_stretch_ratio = 0.0
+custom_fonts/font = SubResource( 2 )
+text = "_
+"
+
+[node name="finished" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[connection signal="tween_all_completed" from="Tween" to="." method="_on_Tween_tween_all_completed"]

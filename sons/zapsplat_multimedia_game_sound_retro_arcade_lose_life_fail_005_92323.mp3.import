@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/zapsplat_multimedia_game_sound_retro_arcade_lose_life_fail_005_92323.mp3-9550b4731a55f4a5a0b62270fb23b7d5.mp3str"
+
+[deps]
+
+source_file="res://sons/zapsplat_multimedia_game_sound_retro_arcade_lose_life_fail_005_92323.mp3"
+dest_files=[ "res://.import/zapsplat_multimedia_game_sound_retro_arcade_lose_life_fail_005_92323.mp3-9550b4731a55f4a5a0b62270fb23b7d5.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

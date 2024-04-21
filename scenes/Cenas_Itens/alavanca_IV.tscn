@@ -1,0 +1,85 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/itens/alavancas.png" type="Texture" id=1]
+[ext_resource path="res://sons/ralot.mp3" type="AudioStream" id=2]
+[ext_resource path="res://script/alavanca_II.gd" type="Script" id=3]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 2 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "ativada"
+length = 0.2
+tracks/0/type = "audio"
+tracks/0/path = NodePath("ativa")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 2 )
+} ],
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 5 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "desativada"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 4 ]
+}
+
+[node name="alavanca_IV" type="Sprite"]
+texture = ExtResource( 1 )
+vframes = 6
+frame = 2
+script = ExtResource( 3 )
+
+[node name="anima_alavancaII" type="AnimationPlayer" parent="."]
+autoplay = "desativada"
+anims/RESET = SubResource( 1 )
+anims/ativada = SubResource( 2 )
+anims/desativada = SubResource( 3 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+scale = Vector2( 2, 1 )
+enabled = true
+cast_to = Vector2( 0, 44 )
+
+[node name="ativa" type="AudioStreamPlayer2D" parent="."]

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/itens/alavancas.png" type="Texture" id=1]
+
+[node name="Alvanca_2" type="Sprite"]
+texture = ExtResource( 1 )
+vframes = 6
+frame = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="TileSet" id=11]
+
+[node name="cenario" type="TileMap" groups=["cenario"]]
+tile_set = SubResource( 11 )
+cell_size = Vector2( 32, 32 )
+format = 1

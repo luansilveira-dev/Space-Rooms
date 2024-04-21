@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/AUD-20221211-WA0052.mp3-800962df31bea4e2e1c0d885b6e085fd.mp3str"
+
+[deps]
+
+source_file="res://music/AUD-20221211-WA0052.mp3"
+dest_files=[ "res://.import/AUD-20221211-WA0052.mp3-800962df31bea4e2e1c0d885b6e085fd.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

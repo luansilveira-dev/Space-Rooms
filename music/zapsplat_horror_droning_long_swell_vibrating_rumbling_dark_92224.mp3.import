@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/zapsplat_horror_droning_long_swell_vibrating_rumbling_dark_92224.mp3-0b5ead6089944453c0755541576610c7.mp3str"
+
+[deps]
+
+source_file="res://music/zapsplat_horror_droning_long_swell_vibrating_rumbling_dark_92224.mp3"
+dest_files=[ "res://.import/zapsplat_horror_droning_long_swell_vibrating_rumbling_dark_92224.mp3-0b5ead6089944453c0755541576610c7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/zapsplat_science_fiction_forcefield_power_energy_shield_humming_airy_86687.mp3-010d5443fb4300e7f21536883c943bbc.mp3str"
+
+[deps]
+
+source_file="res://music/zapsplat_science_fiction_forcefield_power_energy_shield_humming_airy_86687.mp3"
+dest_files=[ "res://.import/zapsplat_science_fiction_forcefield_power_energy_shield_humming_airy_86687.mp3-010d5443fb4300e7f21536883c943bbc.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

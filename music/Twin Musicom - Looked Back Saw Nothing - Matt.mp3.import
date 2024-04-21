@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Twin Musicom - Looked Back Saw Nothing - Matt.mp3-dab43395d059ac9f200c67d1f45efa8d.mp3str"
+
+[deps]
+
+source_file="res://music/Twin Musicom - Looked Back Saw Nothing - Matt.mp3"
+dest_files=[ "res://.import/Twin Musicom - Looked Back Saw Nothing - Matt.mp3-dab43395d059ac9f200c67d1f45efa8d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
